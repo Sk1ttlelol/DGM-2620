@@ -1,0 +1,44 @@
+{ "skeleton": { "images": "C:/Users/Darick/Desktop/images/" },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "Layer 0", "bone": "root", "attachment": "Layer 0" },
+	{ "name": "Arm_L", "bone": "root", "attachment": "Arm_L" },
+	{ "name": "Leg_L", "bone": "root", "attachment": "Leg_L" },
+	{ "name": "Body", "bone": "root", "attachment": "Body" },
+	{ "name": "Leg_R", "bone": "root", "attachment": "Leg_R" },
+	{ "name": "Arm_R", "bone": "root", "attachment": "Arm_R" },
+	{ "name": "Head Neck WIP", "bone": "root", "attachment": "Head Neck WIP" },
+	{ "name": "Sword", "bone": "root", "attachment": "Sword" }
+],
+"skins": {
+	"default": {
+		"Layer 0": {
+			"Layer 0": { "x": 1024, "y": -1024, "width": 2050, "height": 2050 }
+		},
+		"Arm_L": {
+			"Arm_L": { "x": 1030.5, "y": -701.5, "width": 1549, "height": 1265 }
+		},
+		"Leg_L": {
+			"Leg_L": { "x": 1030.5, "y": -1008.5, "width": 1549, "height": 1879 }
+		},
+		"Body": {
+			"Body": { "x": 1030.5, "y": -1005.5, "width": 1549, "height": 1879 }
+		},
+		"Leg_R": {
+			"Leg_R": { "x": 1023.5, "y": -1027, "width": 1563, "height": 1916 }
+		},
+		"Arm_R": {
+			"Arm_R": { "x": 432.5, "y": -719.5, "width": 381, "height": 749 }
+		},
+		"Head Neck WIP": {
+			"Head Neck WIP": { "x": 501.5, "y": -314, "width": 759, "height": 490 }
+		},
+		"Sword": {
+			"Sword": { "x": 946.5, "y": -1111.5, "width": 1763, "height": 461 }
+		}
+	}
+},
+"animations": { "animation": {} }
+}
