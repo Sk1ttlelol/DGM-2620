@@ -1,6 +1,6 @@
 //Maya ASCII 2022 scene
-//Name: DoOrient.ma
-//Last modified: Fri, Dec 10, 2021 04:46:50 PM
+//Name: HalfPaint.ma
+//Last modified: Fri, Dec 10, 2021 07:25:27 PM
 //Codeset: 1252
 requires maya "2022";
 requires "mtoa" "4.2.3";
@@ -10,7 +10,7 @@ fileInfo "product" "Maya 2022";
 fileInfo "version" "2022";
 fileInfo "cutIdentifier" "202106180615-26a94e7f8c";
 fileInfo "osv" "Windows 10 Pro v2009 (Build: 19042)";
-fileInfo "UUID" "892BE593-4A7E-BD8D-D196-D597A5A4553A";
+fileInfo "UUID" "A0FF1FF1-4293-CA39-3540-0E8BB6258581";
 createNode transform -s -n "persp";
 	rename -uid "04DCB8B9-465A-6D64-A180-0EB78F1A62FB";
 	setAttr ".v" no;
@@ -46,14 +46,14 @@ createNode camera -s -n "topShape" -p "top";
 createNode transform -s -n "front";
 	rename -uid "E58F3B0A-470F-7E93-122E-C1B048EE344B";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.65249811614090503 0.74633229639912646 1000.1 ;
+	setAttr ".t" -type "double3" -0.41230133684363879 0.49492295529390418 1000.1 ;
 createNode camera -s -n "frontShape" -p "front";
 	rename -uid "1DA10338-4DD6-F0D7-FD99-49AF05B1DC68";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".pze" yes;
 	setAttr ".coi" 1000.1;
-	setAttr ".ow" 0.71045094301797929;
+	setAttr ".ow" 3.0439840826482825;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
@@ -118,6 +118,7 @@ createNode mesh -n "pPlaneShape2" -p "pPlane2";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "Arm_R";
 	rename -uid "E08E34F0-4C8F-7B19-CB02-1BA446107DB1";
+	setAttr ".v" no;
 	setAttr -l on ".tx";
 	setAttr -l on ".ty";
 	setAttr -l on ".tz";
@@ -976,7 +977,6 @@ createNode mesh -n "BodyShapeOrig" -p "Body";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "Arm_L";
 	rename -uid "8BBFC61E-4C67-30B9-805F-7D9C2F665319";
-	setAttr ".v" no;
 	setAttr -l on ".tx";
 	setAttr -l on ".ty";
 	setAttr -l on ".tz";
@@ -2478,6 +2478,7 @@ createNode joint -n "Arm_R_01" -p "Chest_Joint";
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 180 59.245605920441413 ;
 	setAttr ".radi" 0.0247;
+	setAttr ".liw" yes;
 createNode joint -n "Arm_R_02" -p "Arm_R_01";
 	rename -uid "6ACBBC8F-48DF-8292-7AAA-0D99778C5D7C";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -2488,6 +2489,7 @@ createNode joint -n "Arm_R_02" -p "Arm_R_01";
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -8.8622402463877684e-16 6.7810401910441199e-15 -14.891735708870497 ;
 	setAttr ".radi" 0.0247;
+	setAttr ".liw" yes;
 createNode joint -n "Arm_R_03" -p "Arm_R_02";
 	rename -uid "E1221987-49AC-1582-9B1C-7688F327EC8E";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -2496,7 +2498,7 @@ createNode joint -n "Arm_R_03" -p "Arm_R_02";
 	setAttr ".t" -type "double3" 0.1482898565566608 4.8572257327350599e-17 -1.7550323702381697e-17 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 180 5.2626393359786403e-15 -26.516560970626696 ;
+	setAttr ".jo" -type "double3" 180 5.2626393359786403e-15 -26 ;
 	setAttr ".radi" 0.0247;
 	setAttr ".liw" yes;
 createNode joint -n "Arm_R_04" -p "Arm_R_03";
@@ -3667,92 +3669,90 @@ createNode skinCluster -n "skinCluster4";
 		1 0 1
 		1 0 1
 		1 0 1
-		2 0 0.99868905742187053 1 0.0013109425781294703
-		1 0 1
-		2 0 0.8310452401638031 1 0.1689547598361969
-		2 0 0.7568676620721817 1 0.2431323379278183
-		2 0 0.55819573998451233 1 0.44180426001548767
-		2 0 0.72288984060287476 1 0.27711015939712524
-		2 0 0.13010294735431671 1 0.86989705264568329
-		2 0 0.25376689434051514 1 0.74623310565948486
-		1 1 1
-		2 0 0.069352947175502777 1 0.93064705282449722
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
 		1 0 1
 		1 0 1
+		1 0 1
+		2 0 0.90735304355621338 1 0.092646956443786621
+		2 0 0.80913692712783813 1 0.19086307287216187
+		2 0 0.67113977670669556 1 0.32886022329330444
+		2 0 0.49685314297676086 1 0.50314685702323914
+		2 0 0.51637685298919678 1 0.48362314701080322
+		2 0 0.18039707839488983 1 0.81960292160511017
+		2 0 0.089867644011974335 1 0.91013235598802567
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		2 1 0.64010214805603027 2 0.35989785194396973
+		2 1 0.92196272313594818 2 0.078037276864051819
+		2 1 0.55694127082824707 2 0.44305872917175293
+		2 1 0.293058842420578 2 0.706941157579422
+		2 1 0.24352949857711792 2 0.75647050142288208
+		1 2 1
+		1 2 1
+		2 1 0.044823531061410904 2 0.9551764689385891
+		1 2 1
+		1 2 1
+		1 2 1
+		1 2 1
+		1 2 1
+		1 2 1
 		1 0 1
 		1 0 1
 		1 0 1
 		1 0 1
 		1 0 1
-		2 0 0.7359558641910553 1 0.2640441358089447
-		2 0 0.44957143068313599 1 0.55042856931686401
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		1 1 1
-		2 0 0.90524997562170029 1 0.094750024378299713
 		1 0 1
+		1 0 1
+		1 0 1
+		2 0 0.62684625387191772 1 0.37315374612808228
+		2 0 0.35759755969047546 1 0.64240244030952454
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		2 1 0.70919659733772278 2 0.29080340266227722
+		2 1 0.22905886173248291 2 0.77094113826751709
+		1 2 1
+		1 2 1
+		1 2 1
+		1 2 1
+		1 2 1
+		1 2 1
+		1 2 1
+		2 1 0.37588292360305786 2 0.62411707639694214
+		2 1 0.45052939653396606 2 0.54947060346603394
+		2 1 0.11602944135665894 2 0.88397055864334106
+		2 1 0.69441190361976624 2 0.30558809638023376
+		2 1 0.88208216428756714 2 0.11791783571243286
+		2 1 0.49485296010971069 2 0.50514703989028931
+		2 1 0.91155898571014404 2 0.088441014289855957
+		1 1 1
+		1 1 1
+		2 1 0.70638233423233032 2 0.29361766576766968
+		1 1 1
+		2 1 0.97935055568814278 2 0.020649444311857224
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
 		1 0 1
 		1 0 1
 		1 0 1
@@ -3763,12 +3763,14 @@ createNode skinCluster -n "skinCluster4";
 		1 0 1
 		1 0 1
 		1 0 1
-		1 1 1
-		1 1 1
-		2 0 0.18370413780212402 1 0.81629586219787598
-		2 0 0.53395926952362061 1 0.46604073047637939
-		2 0 0.042462155222892761 1 0.95753784477710724
-		2 0 0.50669115781784058 1 0.49330884218215942
+		1 0 1
+		1 0 1
+		2 0 0.3895147442817688 1 0.6104852557182312
+		2 0 0.18445318937301636 1 0.81554681062698364
+		2 0 0.2498289942741394 1 0.7501710057258606
+		2 0 0.60317987203598022 1 0.39682012796401978
+		2 0 0.35273230075836182 1 0.64726769924163818
+		2 0 0.64831030368804932 1 0.35168969631195068
 		1 1 1
 		1 1 1
 		1 1 1
@@ -4838,23 +4840,53 @@ createNode animCurveTA -n "Middle_joint_rotateZ";
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 0;
 createNode animCurveTA -n "Arm_R_02_rotateX";
-	rename -uid "7558F86A-47F6-9618-00FA-B7AD18F097AD";
+	rename -uid "B44D46C1-4AB8-223E-97C7-DE8FC113DBFE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 20 0;
+	setAttr ".ktv[0]"  1 0;
 createNode animCurveTA -n "Arm_R_02_rotateY";
-	rename -uid "13430DA8-4241-A175-6C86-EE97D24BE8C0";
+	rename -uid "FBBF1994-45A8-2C9F-DEC1-E38F56CFDD8D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 20 0;
+	setAttr ".ktv[0]"  1 0;
 createNode animCurveTA -n "Arm_R_02_rotateZ";
-	rename -uid "905553A7-40E8-62EF-34B2-CC9FFFDF1DE8";
+	rename -uid "660D4695-4940-3F21-37B2-F4AB55A0B03D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 52.310935420384283 20 -50.651209523361601;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Arm_R_03_rotateX";
+	rename -uid "73032D8A-4CC6-5832-B2DC-9497D1257ACF";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Arm_R_03_rotateY";
+	rename -uid "7CA6E918-4B1E-D867-8C04-E9AB5C180789";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Arm_R_03_rotateZ";
+	rename -uid "CDD2D55F-4619-F99B-7A65-CC81EB6E4720";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Arm_R_04_rotateX";
+	rename -uid "9A2483F3-4E27-17B1-BBF8-23AE12CEFA40";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Arm_R_04_rotateY";
+	rename -uid "F22EC5FB-40A5-AE64-D8DD-D4ACCCBB79E1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Arm_R_04_rotateZ";
+	rename -uid "D4671810-400D-EBAD-C045-1A9918D94FBE";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
 select -ne :time1;
-	setAttr ".o" 10;
-	setAttr ".unw" 10;
+	setAttr ".o" 1;
+	setAttr ".unw" 1;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -4917,7 +4949,13 @@ connectAttr "Arm_R_02_rotateX.o" "Arm_R_02.rx";
 connectAttr "Arm_R_02_rotateY.o" "Arm_R_02.ry";
 connectAttr "Arm_R_02_rotateZ.o" "Arm_R_02.rz";
 connectAttr "Arm_R_02.s" "Arm_R_03.is";
+connectAttr "Arm_R_03_rotateX.o" "Arm_R_03.rx";
+connectAttr "Arm_R_03_rotateY.o" "Arm_R_03.ry";
+connectAttr "Arm_R_03_rotateZ.o" "Arm_R_03.rz";
 connectAttr "Arm_R_03.s" "Arm_R_04.is";
+connectAttr "Arm_R_04_rotateX.o" "Arm_R_04.rx";
+connectAttr "Arm_R_04_rotateY.o" "Arm_R_04.ry";
+connectAttr "Arm_R_04_rotateZ.o" "Arm_R_04.rz";
 connectAttr "Arm_R_04.s" "Sword_01.is";
 connectAttr "Sword_01.s" "Sword_02.is";
 connectAttr "Sword_02.s" "Sword_03.is";
@@ -5119,7 +5157,7 @@ connectAttr "Arm_R_01.obcc" "skinCluster4.ifcl[0]";
 connectAttr "Arm_R_02.obcc" "skinCluster4.ifcl[1]";
 connectAttr "Arm_R_03.obcc" "skinCluster4.ifcl[2]";
 connectAttr "Arm_R_04.obcc" "skinCluster4.ifcl[3]";
-connectAttr "Arm_R_02.msg" "skinCluster4.ptt";
+connectAttr "Arm_R_03.msg" "skinCluster4.ptt";
 connectAttr "Root_Joint.msg" "bindPose4.m[0]";
 connectAttr "COG_Joint.msg" "bindPose4.m[1]";
 connectAttr "Hip_Joint.msg" "bindPose4.m[2]";
@@ -5275,4 +5313,4 @@ connectAttr "lambert2.msg" ":defaultShaderList1.s" -na;
 connectAttr "place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "file1.msg" ":defaultTextureList1.tx" -na;
-// End of DoOrient.ma
+// End of HalfPaint.ma
